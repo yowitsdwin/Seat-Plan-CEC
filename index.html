@@ -56,6 +56,9 @@
             padding: 5px 6px;
             box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
             border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .innerHolder:nth-child(3) .row{
@@ -816,6 +819,7 @@
                         <div class="column">81</div>
                     </div>
                     <div class="row row7">
+                        
                         <div class="column">100</div>
                         <div class="column">101</div>
                         <div class="column">102</div>
@@ -826,16 +830,7 @@
                         <div class="column">107</div>
                     </div>
                     <div class="row row8">
-                        <div class="column">101</div>
-                        <div class="column">102</div>
-                        <div class="column">103</div>
-                        <div class="column">104</div>
-                        <div class="column">105</div>
-                        <div class="column">106</div>
-                        <div class="column">107</div>
                         <div class="column">108</div>
-                    </div>
-                    <div class="row row9">
                         <div class="column">109</div>
                         <div class="column">110</div>
                         <div class="column">111</div>
@@ -843,9 +838,9 @@
                         <div class="column">113</div>
                         <div class="column">114</div>
                         <div class="column">115</div>
-                        <div class="column">116</div>
                     </div>
-                    <div class="row row10">
+                    <div class="row row9">
+                        <div class="column">116</div>
                         <div class="column">117</div>
                         <div class="column">136</div>
                         <div class="column">137</div>
@@ -853,10 +848,9 @@
                         <div class="column">139</div>
                         <div class="column">140</div>
                         <div class="column">141</div>
-                        <div class="column">142</div>
-                    
                     </div>
-                    <div class="row row11">
+                    <div class="row row10">
+                        <div class="column">142</div>
                         <div class="column">143</div>
                         <div class="column">144</div>
                         <div class="column">145</div>
@@ -864,9 +858,9 @@
                         <div class="column">147</div>
                         <div class="column">148</div>
                         <div class="column">149</div>
-                        <div class="column">150</div>
                     </div>
-                    <div class="row row12">
+                    <div class="row row11">
+                        <div class="column">150</div>
                         <div class="column">151</div>
                         <div class="column">152</div>
                         <div class="column">153</div>
@@ -874,9 +868,10 @@
                         <div class="column">173</div>
                         <div class="column">174</div>
                         <div class="column">175</div>
-                        <div class="column">176</div>
+
                     </div>
-                    <div class="row row13">
+                    <div class="row row12">
+                        <div class="column">176</div>
                         <div class="column">177</div>
                         <div class="column">178</div>
                         <div class="column">179</div>
@@ -884,10 +879,9 @@
                         <div class="column">181</div>
                         <div class="column">182</div>
                         <div class="column">183</div>
-                        <div class="column">184</div>
-                        
                     </div>
-                    <div class="row row14">
+                    <div class="row row13">
+                        <div class="column">184</div>
                         <div class="column">185</div>
                         <div class="column">186</div>
                         <div class="column">187</div>
@@ -895,10 +889,10 @@
                         <div class="column">208</div>
                         <div class="column">209</div>
                         <div class="column">210</div>
-                        <div class="column">211</div>
                         
                     </div>
-                    <div class="row row15">
+                    <div class="row row14">
+                        <div class="column">211</div>
                         <div class="column">212</div>
                         <div class="column">213</div>
                         <div class="column">214</div>
@@ -906,11 +900,10 @@
                         <div class="column">216</div>
                         <div class="column">217</div>
                         <div class="column">218</div>
-                        <div class="column">219</div>
                         
-
                     </div>
-                    <div class="row row16">
+                    <div class="row row15">
+                        <div class="column">219</div>
                         <div class="column">220</div>
                         <div class="column">221</div>
                         <div class="column">222</div>
@@ -918,24 +911,36 @@
                         <div class="column">224</div>
                         <div class="column">225</div>
                         <div class="column">244</div>
-                        <div class="column">245</div>
-                        
 
                     </div>
-                    <div class="row row17">
+                    <div class="row row16">
+                        <div class="column">245</div>
                         <div class="column">246</div>
                         <div class="column">247</div>
                         <div class="column">248</div>
                         <div class="column">249</div>
                         <div class="column">250</div>
                         <div class="column">251</div>
+                        <div class="column">252</div>
+                    </div>
+                    <div class="row row17">
+                        
                         
                     </div>
                     <div class="row row18">
-                        <div class="column">252</div>
-                        <div class="column">253</div>
-                        <div class="column">254</div>
                         
+                        <div class="column">253</div>
+                        <div class="column">255</div>
+                        <div class="column">256</div>
+                        <div class="column">257</div>
+                        <div class="column">258</div>
+                        
+                    </div>
+
+                    <div class="row row19">
+                        <div class="column">259</div>
+                        <div class="column">260</div>
+                        <div class="column">261</div>
                     </div>
                 </div>
         </div>
@@ -1277,22 +1282,19 @@
         for (const seat of columnsA) {
             console.log(seat.textContent.toLowerCase() + "==" +  x + 1)
             if(seat.textContent.toLowerCase() == x + 1){
-                seat.style.background = "rgb(0,0,0,0.5)";
-                seat.style.color = "white";
+                seat.style.background = "rgb(100,255,100,0.5)";
             }
         }
 
         for (const seat of columnsC) {
             if(seat.textContent.toLowerCase() == x + 1){
-                seat.style.background = "rgb(0,0,0,0.5)"; 
-                seat.style.color = "white";
+                seat.style.background = "rgb(100,255,100,0.5)"; 
             }
         }
 
 
         
-        columns[x].style.background = "rgb(0,0,0,0.5)";
-        columns[x].style.color = "white";
+        columns[x].style.background = "rgb(100,255,100,0.5)";
 
 
         
