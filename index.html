@@ -128,7 +128,7 @@
             display:block;
             width: max-content;
             position: absolute;
-            top: 10px;
+            top: 5px;
             right: 10px;
         }
 
@@ -149,11 +149,21 @@
             border-radius: 10px;
         }
 
+        @media only screen and (max-width: 600px) {
+            .toHide{
+                display: none;
+            }
+
+            .innerHolderInput{
+                width: 90dvw;
+            }
+        }
+
     </style>
 </head>
 <body>
     <h1>Seat Plan</h1>
-    <button id="searchBtn" onclick="showSearch()"> <i class="fa fa-search"></i> Search Student</button>
+    <button id="searchBtn" onclick="showSearch()"> <i class="fa fa-search"></i> <span class="toHide">Search Student</span></button>
     <div class="outerHolder">
         <div class="innerHolder" id="seatA">
             <div class="row row1">
@@ -1290,5 +1300,4 @@
 
 
 </script>
-
 </html>
