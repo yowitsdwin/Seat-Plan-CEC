@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea, pre { width: 100%; padding: 10px; margin: 10px 0; font-size: 14px; }
+    button { padding: 10px 15px; font-size: 14px; cursor: pointer; margin-right: 5px; }
+    pre { background: #f4f4f4; border: 1px solid #ccc; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Names to Template Converter</h2>
+  <textarea id="inputNames" rows="8" placeholder="Paste your list of names here..."></textarea>
+  <br>
+  <button onclick="generate()">Generate</button>
+  <button onclick="copyResult()">Copy</button>
+  <h3>Result:</h3>
+  <pre id="output"></pre>
+
+  <script>
+    function generate() {
+      const input = document.getElementById("inputNames").value.trim();
+      if (!input) {
+        document.getElementById("output").textContent = "";
+        return;
+      }
+      const names = input.split("\n").map(name => `"${name.trim()} ",`);
+      document.getElementById("output").textContent = names.join("\n");
+    }
+
+    function copyResult() {
+      const output = document.getElementById("output").textContent;
+      if (!output) return alert("Nothing to copy!");
+      
+      navigator.clipboard.writeText(output).then(() => {
+        alert("Copied to clipboard!");
+      }).catch(() => {
+        alert("Failed to copy!");
+      });
+    }
+  </script>
+</body>
+</html>
